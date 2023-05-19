@@ -4,11 +4,11 @@ from api import taom_qaytar
 from googletrans import Translator
 logging.basicConfig(level=logging.INFO)
 
-bot=Bot(token="6041712389:AAGAkN3AJW9HcgvIvFHALXsXc2MP5uSwaeY")
+bot=Bot(token="bot token yoz")
 dp=Dispatcher(bot)
 
 @dp.message_handler(commands="start")
-async def start(mess:types.Message):
+async def started(mess:types.Message):
     await mess.reply(f"Salom {mess.chat.full_name}.\nTaom hohliysanmi?\n/taom ni bos!!!!")
 
 @dp.message_handler(commands="taom")
